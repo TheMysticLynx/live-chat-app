@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.df4645b0.css",
-    "main.js": "/static/js/main.bb759455.js",
-    "static/js/787.e04bcfaf.chunk.js": "/static/js/787.e04bcfaf.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/index.html",
-    "static/media/firebase-icon.svg": "/static/media/firebase-icon.82a35fc0b90d124a8e7333989f767fd3.svg",
-    "static/media/source_icons_plus.svg": "/static/media/source_icons_plus.250d2711e356b901053a040eed9ea2a4.svg",
-    "main.df4645b0.css.map": "/static/css/main.df4645b0.css.map",
-    "main.bb759455.js.map": "/static/js/main.bb759455.js.map",
-    "787.e04bcfaf.chunk.js.map": "/static/js/787.e04bcfaf.chunk.js.map"
+    "main.css": "/live-chat-app/static/css/main.df4645b0.css",
+    "main.js": "/live-chat-app/static/js/main.806c9e70.js",
+    "static/js/787.e04bcfaf.chunk.js": "/live-chat-app/static/js/787.e04bcfaf.chunk.js",
+    "static/media/logo.svg": "/live-chat-app/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/live-chat-app/index.html",
+    "static/media/firebase-icon.svg": "/live-chat-app/static/media/firebase-icon.82a35fc0b90d124a8e7333989f767fd3.svg",
+    "static/media/source_icons_plus.svg": "/live-chat-app/static/media/source_icons_plus.250d2711e356b901053a040eed9ea2a4.svg",
+    "main.df4645b0.css.map": "/live-chat-app/static/css/main.df4645b0.css.map",
+    "main.806c9e70.js.map": "/live-chat-app/static/js/main.806c9e70.js.map",
+    "787.e04bcfaf.chunk.js.map": "/live-chat-app/static/js/787.e04bcfaf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.df4645b0.css",
-    "static/js/main.bb759455.js"
+    "static/js/main.806c9e70.js"
   ]
 }
