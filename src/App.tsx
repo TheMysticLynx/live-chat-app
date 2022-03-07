@@ -1,26 +1,43 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Header from './Components/Header';
+import { useAuth } from './Hooks/AuthHooks';
+import { useNavigate } from 'react-router-dom';
+import Sidebar from './Components/Sidebar';
+import Popup from './Components/Popup';
+import AddChatPopup from './Components/AddChatPopup';
+import { connect, ConnectedProps } from 'react-redux';
+import { RootState } from './Redux/store';
+import Chat from './Components/Chat';
 
-function App() {
-  return (
+const connector = connect((state: RootState) => ({
+  addChatPopup: state.popup.AddNewChat
+}))
+
+function App(props: ConnectedProps<typeof connector>) {
+  let user = useAuth();
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    if (user == null) {
+      navigate('/login');
+    }
+  }, [user]);
+
+
+  return (<>
+    {props.addChatPopup && (<Popup>
+      <AddChatPopup />
+    </Popup>)}
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="content">
+        <Sidebar />
+        <Chat />
+      </div>
     </div>
-  );
+  </>);
 }
 
-export default App;
+export default connector(App);

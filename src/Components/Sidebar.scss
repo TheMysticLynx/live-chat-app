@@ -1,0 +1,96 @@
+@import "../colors.scss";
+
+.Sidebar {
+    height: 100%;
+    width: 100%;
+    background-color: darken($dark-shades, 5%);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+    position: relative;
+}
+
+.SidebarChatItem {
+    box-sizing: border-box;
+    color: $light-shades;
+    background-color: darken($dark-shades, 10%);
+    padding: .5em 1em;
+    margin: .5em;
+    border-radius: .5em;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    &:hover {
+        background-color: darken($dark-shades, 15%);
+        grid-template-columns: 1fr 20px;
+        .delete-container {
+            display: flex;
+        }
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .lastMessage {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: .5em;
+    }
+    img {
+        clip-path: circle();
+        height: 30px;
+    }
+
+}
+
+.delete-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+    &:hover {
+        color: red;
+    }
+}
+
+.add-button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+
+    background-color: $dark-accent;
+    clip-path: circle();
+    color: white;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    text-align: center;
+    align-items: stretch;
+    justify-content: center;
+
+    transition: .5s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: darken($dark-accent, 10%);
+    }
+
+    p {
+        line-height: 50px;
+    }
+}
+
+.current {
+    color: $dark-accent;
+}

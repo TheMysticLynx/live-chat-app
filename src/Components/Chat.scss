@@ -1,0 +1,66 @@
+@import "../colors.scss";
+
+.Chat {
+    overflow-y: auto;
+    display: grid;
+    grid-template-rows: auto 50px;
+    height: 100%;
+    width: 100%;
+}
+
+.ChatMessages {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: .5em;
+    padding: 1em;
+}
+
+.ChatMessage {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5em;
+    
+    img {
+        height: 50px;
+        clip-path: circle();
+    }
+    color: $dark-shades;
+    p {
+        margin: 0;
+        padding: 5px;
+        background-color: $light-shades;
+        border-radius: 50px;
+        line-height: 25px;
+        padding: 12.5px 12.5px;
+    }
+}
+
+.self {
+    flex-direction: row-reverse;
+}
+
+form {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: $light-shades;
+    border-radius: 50px;
+    input {
+        width: 80%;
+        background: none;
+        border: none;
+    }
+    button {
+        position: absolute;
+        right: 1em;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 100%;
+        color: $light-shades;
+    }
+}
