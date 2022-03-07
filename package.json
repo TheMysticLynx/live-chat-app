@@ -1,5 +1,6 @@
 {
   "name": "live-chat-app",
+  "homepage": "https://themysticlynx.github.io/live-chat-app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
